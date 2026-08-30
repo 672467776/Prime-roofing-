@@ -1,35 +1,398 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
 
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-
-
+<title>Prime Roofing & Property Maintenance | Skipton</title>
 
 <style>
 
-body{margin:0;font-family:Arial;color:#222;background:#f4f4f4}
+* {
 
-header{background:#111820;color:white;text-align:center;padding:60px 20px}
+    box-sizing: border-box;
 
-h1{font-size:38px}
+}
 
-h2{text-align:center}
+body {
 
-.btn{display:inline-block;background:#e0a629;color:#111;padding:15px 25px;border-radius:7px;text-decoration:none;font-weight:bold}
+    margin: 0;
 
-section{max-width:1000px;margin:auto;padding:40px 20px}
+    font-family: Arial, Helvetica, sans-serif;
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.call{text-align:center;background:#111820;color:white;padding:50px 20px}
+    color: #222;
 
-.phone{color:white;font-size:28px;font-weight:bold}
+    background: #f5f5f5;
 
-footer{text-align:center;background:#080b0e;color:#aaa;padding:25px}
+    line-height: 1.6;
+
+}
+
+header {
+
+    background: #111820;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px 50px;
+
+}
+
+.logo {
+
+    max-width: 240px;
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 25px;
+
+}
+
+.hero-text {
+
+    max-width: 750px;
+
+    margin: auto;
+
+}
+
+.hero-text h1 {
+
+    font-size: 34px;
+
+    margin: 10px 0;
+
+    letter-spacing: 1px;
+
+}
+
+.hero-text p {
+
+    font-size: 18px;
+
+    margin: 8px 0 25px;
+
+}
+
+.btn {
+
+    display: inline-block;
+
+    background: #e0a629;
+
+    color: #111;
+
+    padding: 15px 28px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 17px;
+
+    margin: 5px;
+
+}
+
+.btn:hover {
+
+    opacity: 0.9;
+
+}
+
+section {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 55px 20px;
+
+}
+
+.section-title {
+
+    text-align: center;
+
+    font-size: 30px;
+
+    margin: 0 0 10px;
+
+    color: #111820;
+
+}
+
+.section-intro {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 35px;
+
+    color: #555;
+
+}
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+
+}
+
+.service {
+
+    background: white;
+
+    padding: 28px 20px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+    border-top: 4px solid #e0a629;
+
+}
+
+.service h3 {
+
+    margin-top: 0;
+
+    color: #111820;
+
+    font-size: 19px;
+
+}
+
+.service p {
+
+    margin-bottom: 0;
+
+    color: #666;
+
+}
+
+.trust {
+
+    background: #111820;
+
+    color: white;
+
+    max-width: none;
+
+}
+
+.trust-inner {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+.trust .section-title {
+
+    color: white;
+
+}
+
+.trust-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+    margin-top: 30px;
+
+}
+
+.trust-box {
+
+    text-align: center;
+
+    padding: 20px;
+
+}
+
+.trust-box h3 {
+
+    color: #e0a629;
+
+    font-size: 20px;
+
+}
+
+.work-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+}
+
+.work-photo {
+
+    width: 100%;
+
+    height: 260px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 8px;
+
+}
+
+.quote {
+
+    background: #e0a629;
+
+    color: #111;
+
+    text-align: center;
+
+    padding: 55px 20px;
+
+}
+
+.quote h2 {
+
+    font-size: 32px;
+
+    margin: 0 0 10px;
+
+}
+
+.quote p {
+
+    font-size: 18px;
+
+}
+
+.quote .phone {
+
+    display: block;
+
+    color: #111;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    margin: 15px 0;
+
+}
+
+.quote .btn {
+
+    background: #111820;
+
+    color: white;
+
+}
+
+footer {
+
+    background: #080b0e;
+
+    color: #aaa;
+
+    text-align: center;
+
+    padding: 25px 20px;
+
+}
+
+@media (max-width: 700px) {
+
+    header {
+
+        padding: 25px 15px 40px;
+
+    }
+
+    .logo {
+
+        max-width: 210px;
+
+    }
+
+    .hero-text h1 {
+
+        font-size: 27px;
+
+    }
+
+    .hero-text p {
+
+        font-size: 16px;
+
+    }
+
+    section {
+
+        padding: 40px 15px;
+
+    }
+
+    .section-title {
+
+        font-size: 27px;
+
+    }
+
+    .work-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+
+    }
+
+    .work-photo {
+
+        height: 180px;
+
+    }
+
+    .quote h2 {
+
+        font-size: 28px;
+
+    }
+
+    .quote .phone {
+
+        font-size: 26px;
+
+    }
+
+}
 
 </style>
 
@@ -39,40 +402,163 @@ footer{text-align:center;background:#080b0e;color:#aaa;padding:25px}
 
 <header>
 
-<p>SKIPTON & SURROUNDING AREAS</p>
-<img src="IMG_0641.jpeg" alt="Prime Roofing logo" style="max-width:220px;height:auto;display:block;margin:0 auto 20px;">
+<img class="logo" src="IMG_0641.jpeg" alt="Prime Roofing & Property Maintenance logo">
 
+<div class="hero-text">
 
+<h1>Professional Roofing & Property Maintenance</h1>
 
+<p>Quality workmanship across Skipton & surrounding areas</p>
 
-<a class="btn" href="tel:07709671724">CALL 07709 671724</a>
+<a class="btn" href="tel:07709671724">CALL FOR A FREE QUOTE</a>
+
+</div>
 
 </header>
 
 <section>
 
-<h2>Our Services</h2>
+<h2 class="section-title">Our Services</h2>
 
-<div class="grid">
+<p class="section-intro">
 
-<h2>ROOFING • REPAIRS • PROPERTY MAINTENANCE</h2>
-.🏠 Re-Roofing</h3><p>Complete re-roofing and replacement work.</p></div>
+Professional roofing and property maintenance services for homes and properties throughout Skipton and the surrounding areas.
 
-<div class="box"><h3>🔨 Roof Repairs</h3><p>From a broken slate to general roof repairs.</p></div>
+</p>
 
-<div class="box"><h3>🔧 Lead Work</h3><p>Lead repairs and roofing leadwork.</p></div>
+<div class="services-grid">
 
-<div class="box"><h3>💧 Gutters</h3><p>Gutter installation and repairs.</p></div>
+<div class="service">
 
-<div class="box"><h3>🏠 Dry Ridge & Verges</h3><p>Dry ridge kits and dry verge systems.</p></div><div class="box"><h3>🧽 Jet Washing</h3><p>Driveways, patios and outdoor areas.</p></div>
+<h3>Re-Roofing</h3>
 
-<div class="box"><h3>🧱 Flagging</h3><p>Flagging and paving work.</p></div>
+<p>Complete re-roofing and roof replacement work.</p>
 
-<div class="box"><h3>🌿 Artificial Grass</h3><p>Artificial grass installation.</p></div>
+</div>
 
-<div class="box"><h3>🎨 Painting</h3><p>Internal and external painting.</p></div>
+<div class="service">
 
-<div class="box"><h3>🛠 Property Maintenance</h3><p>And much more.</p></div>
+<h3>Roof Repairs</h3>
+
+<p>From broken slates to general roof repairs.</p>
+
+</div>
+
+<div class="service">
+
+<h3>Lead Work</h3>
+
+<p>Professional lead repairs and roofing leadwork.</p>
+
+</div>
+
+<div class="service">
+
+<h3>Gutters</h3>
+
+<p>Gutter installation, maintenance and repairs.</p>
+
+</div>
+
+<div class="service">
+
+<h3>Dry Ridge & Verges</h3>
+
+<p>Dry ridge kits and dry verge systems.</p>
+
+</div>
+
+<div class="service">
+
+<h3>Jet Washing</h3>
+
+<p>Driveways, patios and outdoor areas.</p>
+
+</div>
+
+<div class="service">
+
+<h3>Flagging</h3>
+
+<p>Flagging, paving and outdoor groundwork.</p>
+
+</div>
+
+<div class="service">
+
+<h3>Artificial Grass</h3>
+
+<p>Professional artificial grass installation.</p>
+
+</div>
+
+<div class="service">
+
+<h3>Painting</h3>
+
+<p>Internal and external painting work.</p>
+
+</div>
+
+<div class="service">
+
+<h3>Property Maintenance</h3>
+
+<p>Reliable maintenance services and much more.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="trust">
+
+<div class="trust-inner">
+
+<h2 class="section-title">Why Choose Prime Roofing?</h2>
+
+<p class="section-intro">
+
+Professional service, quality workmanship and reliable property maintenance across Skipton and surrounding areas.
+
+</p>
+
+<div class="trust-grid">
+
+<div class="trust-box">
+
+<h3>Quality Workmanship</h3>
+
+<p>We take pride in delivering quality work and attention to detail.</p>
+
+</div>
+
+<div class="trust-box">
+
+<h3>Local Service</h3>
+
+<p>Proudly serving Skipton and the surrounding areas.</p>
+
+</div>
+
+<div class="trust-box">
+
+<h3>Free Quotes</h3>
+
+<p>No-obligation quotations for your roofing or property project.</p>
+
+</div>
+
+<div class="trust-box">
+
+<h3>Professional Service</h3>
+
+<p>Reliable, straightforward service from start to finish.</p>
+
+</div>
+
+</div>
 
 </div>
 
@@ -80,76 +566,69 @@ footer{text-align:center;background:#080b0e;color:#aaa;padding:25px}
 
 <section>
 
+<h2 class="section-title">Our Recent Work</h2>
 
-<p style="text-
-align:center">
-<section>
+<p class="section-intro">
 
-<h2>Our Work</h2>
+Take a look at some of our recent roofing and property maintenance work.
 
-<p style="text-align:center;">
-
-Take a look at some of our recent work.
-<img src="IMG_3185.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
-
-<img src="IMG_3219.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
-
-<img src="IMG_3232.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
-
-<img src="IMG_3304.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
-
-<img src="IMG_3511.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
-
-<img src="IMG_3713.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
-
-<img src="IMG_3721.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
-
-<img src="IMG_3724.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
-
-<img src="IMG_3753.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
 </p>
 
-<div>
+<div class="work-grid">
 
-<img src="IMG_0103.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
+<img class="work-photo" src="IMG_0103.jpeg" alt="Prime Roofing recent work">
 
-<img src="IMG_0104.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
+<img class="work-photo" src="IMG_0104.jpeg" alt="Prime Roofing recent work">
 
-<img src="IMG_0105.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
+<img class="work-photo" src="IMG_0105.jpeg" alt="Prime Roofing recent work">
 
-<img src="IMG_0316.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
+<img class="work-photo" src="IMG_0316.jpeg" alt="Prime Roofing recent work">
 
-<img src="IMG_0327.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
+<img class="work-photo" src="IMG_0327.jpeg" alt="Prime Roofing recent work">
 
-<img src="IMG_0496.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
+<img class="work-photo" src="IMG_0496.jpeg" alt="Prime Roofing recent work">
 
-<img src="IMG_0548.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
+<img class="work-photo" src="IMG_0548.jpeg" alt="Prime Roofing recent work">
 
 
 
-<img src="IMG_3856.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
+<img class="work-photo" src="IMG_3856.jpeg" alt="Prime Roofing recent work">
 
-<img src="IMG_3862.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
+<img class="work-photo" src="IMG_3862.jpeg" alt="Prime Roofing recent work">
 
-<img src="IMG_3882.png" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
+<img class="work-photo" src="IMG_3882.png" alt="Prime Roofing recent work">
 
-<img src="IMG_4506.jpeg" alt="Prime Roofing work" style="width:100%;max-width:700px;margin:10px 0;border-radius:10px;">
+<img class="work-photo" src="IMG_4506.jpeg" alt="Prime Roofing recent work">
+
+<img class="work-photo" src="IMG_3185.jpeg" alt="Prime Roofing recent work">
+
+<img class="work-photo" src="IMG_3219.jpeg" alt="Prime Roofing recent work">
+
+<img class="work-photo" src="IMG_3232.jpeg" alt="Prime Roofing recent work">
+
+<img class="work-photo" src="IMG_3304.jpeg" alt="Prime Roofing recent work">
+
+<img class="work-photo" src="IMG_3511.jpeg" alt="Prime Roofing recent work">
+
+<img class="work-photo" src="IMG_3713.jpeg" alt="Prime Roofing recent work">
+
+<img class="work-photo" src="IMG_3721.jpeg" alt="Prime Roofing recent work">
+
+<img class="work-photo" src="IMG_3724.jpeg" alt="Prime Roofing recent work">
+
+<img class="work-photo" src="IMG_3753.jpeg" alt="Prime Roofing recent work">
 
 </div>
 
 </section>
 
-</p>
+<div class="quote">
 
-</<div class="call">
+<h2>FREE, NO-OBLIGATION QUOTES</h2>
 
-<h2>FREE QUOTES</h2>
-
-<p>No obligation. Call us today.</p>
+<p>Contact Prime Roofing & Property Maintenance today to discuss your project.</p>
 
 <a class="phone" href="tel:07709671724">07709 671724</a>
-
-<br><br>
 
 <a class="btn" href="tel:07709671724">CALL NOW</a>
 
