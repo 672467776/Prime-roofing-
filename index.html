@@ -1,1187 +1,377 @@
-html
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Prime Roofing & Property Maintenance | Skipton</title>
 
-
-
 <style>
-:root {
-    --green: #087443;
-    --dark-green: #04552f;
-    --light-green: #eef8f2;
-    --lighter-green: #f7fbf8;
-    --white: #ffffff;
-    --text: #18231e;
-    --muted: #66736c;
-    --border: #dce9e1;
-    --shadow: 0 12px 35px rgba(4, 85, 47, 0.10);
-}
 
 * {
+
     box-sizing: border-box;
+
     margin: 0;
+
     padding: 0;
+
 }
 
 html {
+
     scroll-behavior: smooth;
+
 }
 
 body {
+
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--text);
-    background: var(--white);
-    line-height: 1.6;
-}
 
-img {
-    max-width: 100%;
-}
+    background: #000;
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* HEADER */
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255,255,255,0.97);
-    border-bottom: 1px solid var(--border);
-    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
-}
-
-.navbar {
-    max-width: 1200px;
-    margin: auto;
-    min-height: 82px;
-    padding: 10px 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-}
-
-.nav-logo {
-    display: flex;
-    align-items: center;
-}
-
-.nav-logo img {
-    width: 150px;
-    max-height: 62px;
-    object-fit: contain;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.nav-links a {
-    font-weight: 700;
-    font-size: 15px;
-    color: var(--text);
-    transition: 0.2s ease;
-}
-
-.nav-links a:hover {
-    color: var(--green);
-}
-
-.nav-call {
-    background: var(--green);
-    color: white !important;
-    padding: 12px 20px;
-    border-radius: 7px;
-}
-
-.nav-call:hover {
-    background: var(--dark-green);
-}
-
-.menu-btn {
-    display: none;
-    border: 0;
-    background: transparent;
-    color: var(--green);
-    font-size: 30px;
-    cursor: pointer;
 }
 
 /* HERO */
 
 .hero {
-    min-height: 620px;
-    display: flex;
-    align-items: center;
+
+    min-height: 100vh;
+
     position: relative;
-    overflow: hidden;
-    background:
-        linear-gradient(90deg, rgba(4,85,47,0.96) 0%, rgba(4,85,47,0.82) 48%, rgba(4,85,47,0.30) 100%),
-        url("IMG_0740.jpeg") center/cover no-repeat;
-}
 
-.hero-inner {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 90px 25px;
-}
-
-.hero-content {
-    max-width: 700px;
-    color: white;
-}
-
-.hero-label {
-    display: inline-block;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.35);
-    padding: 8px 15px;
-    border-radius: 30px;
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 22px;
-}
-
-.hero h1 {
-    font-size: clamp(40px, 6vw, 70px);
-    line-height: 1.05;
-    margin-bottom: 22px;
-    letter-spacing: -2px;
-}
-
-.hero p {
-    font-size: 20px;
-    max-width: 620px;
-    margin-bottom: 32px;
-    color: rgba(255,255,255,0.94);
-}
-
-.hero-buttons {
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    padding-bottom: 90px;
+
+    background:
+
+        linear-gradient(
+
+            rgba(0,0,0,0.18),
+
+            rgba(0,0,0,0.42)
+
+        ),
+
+        url("IMG_0740.jpeg") center center / cover no-repeat;
+
+}
+
+/* LOGO */
+
+.logo {
+
+    position: absolute;
+
+    top: 25px;
+
+    left: 30px;
+
+    width: 200px;
+
+    max-height: 100px;
+
+    object-fit: contain;
+
+}
+
+/* BUTTONS */
+
+.buttons {
+
+    display: flex;
+
+    gap: 16px;
+
+    width: auto;
+
 }
 
 .btn {
+
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
-    padding: 15px 25px;
+
+    min-width: 190px;
+
+    padding: 16px 28px;
+
     border-radius: 7px;
-    font-weight: 800;
-    transition: 0.2s ease;
-    border: 2px solid transparent;
-}
 
-.btn-green {
-    background: var(--green);
-    color: white;
-}
-
-.btn-green:hover {
-    background: var(--dark-green);
-    transform: translateY(-2px);
-}
-
-.btn-white {
-    background: white;
-    color: var(--dark-green);
-}
-
-.btn-white:hover {
-    background: var(--light-green);
-    transform: translateY(-2px);
-}
-
-/* QUICK INFO */
-
-.quick-info {
-    background: white;
-    margin-top: -45px;
-    position: relative;
-    z-index: 5;
-}
-
-.quick-inner {
-    max-width: 1100px;
-    margin: auto;
-    background: white;
-    box-shadow: var(--shadow);
-    border-radius: 12px;
-    padding: 28px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.quick-box {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 10px 20px;
-    border-right: 1px solid var(--border);
-}
-
-.quick-box:last-child {
-    border-right: 0;
-}
-
-.quick-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: var(--light-green);
-    color: var(--green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    flex-shrink: 0;
-}
-
-.quick-box strong {
-    display: block;
     font-size: 16px;
-}
 
-.quick-box span {
-    color: var(--muted);
-    font-size: 14px;
-}
-
-/* GENERAL */
-
-section {
-    padding: 90px 25px;
-}
-
-.container {
-    max-width: 1150px;
-    margin: auto;
-}
-
-.section-heading {
-    text-align: center;
-    max-width: 750px;
-    margin: 0 auto 50px;
-}
-
-.section-heading span {
-    color: var(--green);
     font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-size: 13px;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+
 }
 
-.section-heading h2 {
-    font-size: clamp(32px, 5vw, 46px);
-    line-height: 1.15;
-    margin: 10px 0 15px;
+.quote {
+
+    background: #ffffff;
+
+    color: #04552f;
+
 }
 
-.section-heading p {
-    color: var(--muted);
-    font-size: 17px;
+.quote:hover {
+
+    background: #eef8f2;
+
+    transform: translateY(-2px);
+
 }
 
-/* SERVICES */
+.work {
 
-.services-section {
-    background: var(--lighter-green);
+    background: #087443;
+
+    color: #ffffff;
+
 }
 
-.services-grid {
+.work:hover {
+
+    background: #04552f;
+
+    transform: translateY(-2px);
+
+}
+
+/* OUR WORK */
+
+#work {
+
+    background: #ffffff;
+
+    padding: 60px 20px;
+
+}
+
+.gallery {
+
+    max-width: 1200px;
+
+    margin: auto;
+
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
 
-.service-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 30px;
-    transition: 0.25s ease;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
-}
-
-.service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow);
-    border-color: #b9dac7;
-}
-
-.service-icon {
-    width: 55px;
-    height: 55px;
-    border-radius: 10px;
-    background: var(--light-green);
-    color: var(--green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-    margin-bottom: 20px;
-}
-
-.service-card h3 {
-    font-size: 20px;
-    margin-bottom: 9px;
-}
-
-.service-card p {
-    color: var(--muted);
-    font-size: 15px;
-}
-
-/* ABOUT */
-
-.about-section {
-    background: white;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 65px;
-    align-items: center;
-}
-
-.about-image img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-}
-
-.about-content span {
-    color: var(--green);
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-size: 13px;
-}
-
-.about-content h2 {
-    font-size: 43px;
-    line-height: 1.15;
-    margin: 10px 0 20px;
-}
-
-.about-content > p {
-    color: var(--muted);
-    margin-bottom: 28px;
-    font-size: 17px;
-}
-
-.check-list {
-    list-style: none;
-    display: grid;
     gap: 15px;
+
 }
 
-.check-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-weight: 700;
-}
+.gallery img {
 
-.check {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: var(--green);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    font-size: 13px;
-}
-
-/* GALLERY */
-
-.gallery-section {
-    background: var(--lighter-green);
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    cursor: pointer;
-    background: #ddd;
-    height: 250px;
-}
-
-.gallery-item.featured {
-    grid-column: span 2;
-    grid-row: span 2;
-    height: 515px;
-}
-
-.gallery-item img {
     width: 100%;
-    height: 100%;
+
+    height: 300px;
+
     object-fit: cover;
+
+    border-radius: 10px;
+
     display: block;
-    transition: transform 0.4s ease;
-}
 
-.gallery-item:hover img {
-    transform: scale(1.06);
-}
-
-.gallery-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(transparent 50%, rgba(0,0,0,0.7));
-    opacity: 0;
-    transition: 0.25s ease;
-    display: flex;
-    align-items: flex-end;
-    padding: 20px;
-    color: white;
-    font-weight: 700;
-}
-
-.gallery-item:hover .gallery-overlay {
-    opacity: 1;
-}
-
-/* LIGHTBOX */
-
-.lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.9);
-    z-index: 2000;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 25px;
-}
-
-.lightbox.active {
-    display: flex;
-}
-
-.lightbox img {
-    max-width: 95%;
-    max-height: 90vh;
-    object-fit: contain;
-    border-radius: 8px;
-}
-
-.close-lightbox {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    color: white;
-    font-size: 42px;
     cursor: pointer;
-    line-height: 1;
+
+    transition: 0.25s ease;
+
 }
 
-/* CTA */
+.gallery img:hover {
 
-.cta {
-    background: linear-gradient(135deg, var(--dark-green), var(--green));
-    color: white;
-    text-align: center;
-}
+    transform: scale(1.02);
 
-.cta-inner {
-    max-width: 850px;
-    margin: auto;
-}
-
-.cta h2 {
-    font-size: clamp(34px, 5vw, 50px);
-    line-height: 1.1;
-    margin-bottom: 15px;
-}
-
-.cta p {
-    font-size: 18px;
-    opacity: 0.92;
-    margin-bottom: 25px;
-}
-
-.cta-phone {
-    display: inline-block;
-    color: white;
-    font-size: clamp(28px, 5vw, 40px);
-    font-weight: 900;
-    margin-bottom: 25px;
-}
-
-/* CONTACT */
-
-.contact-section {
-    background: white;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
-
-.contact-card {
-    background: var(--lighter-green);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 35px;
-}
-
-.contact-card h3 {
-    color: var(--green);
-    font-size: 22px;
-    margin-bottom: 12px;
-}
-
-.contact-card p {
-    color: var(--muted);
-    margin-bottom: 18px;
-}
-
-.contact-link {
-    color: var(--dark-green);
-    font-weight: 800;
-    font-size: 19px;
-}
-
-/* FOOTER */
-
-footer {
-    background: #033b21;
-    color: white;
-    padding: 45px 25px 25px;
-}
-
-.footer-inner {
-    max-width: 1150px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 40px;
-    padding-bottom: 35px;
-}
-
-.footer-brand img {
-    width: 180px;
-    background: white;
-    padding: 8px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.footer-brand p {
-    color: rgba(255,255,255,0.75);
-    max-width: 420px;
-}
-
-footer h3 {
-    margin-bottom: 15px;
-}
-
-footer ul {
-    list-style: none;
-    display: grid;
-    gap: 8px;
-}
-
-footer li,
-footer a {
-    color: rgba(255,255,255,0.75);
-}
-
-footer a:hover {
-    color: white;
-}
-
-.footer-bottom {
-    max-width: 1150px;
-    margin: auto;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.15);
-    text-align: center;
-    color: rgba(255,255,255,0.6);
-    font-size: 14px;
 }
 
 /* MOBILE */
 
-@media (max-width: 900px) {
-
-    .nav-links {
-        position: absolute;
-        top: 82px;
-        left: 0;
-        right: 0;
-        background: white;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        border-bottom: 1px solid var(--border);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        padding: 16px 25px;
-        border-bottom: 1px solid var(--border);
-    }
-
-    .nav-call {
-        border-radius: 0 !important;
-        text-align: center;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    .quick-inner {
-        grid-template-columns: 1fr;
-    }
-
-    .quick-box {
-        border-right: 0;
-        border-bottom: 1px solid var(--border);
-        padding-bottom: 18px;
-    }
-
-    .quick-box:last-child {
-        border-bottom: 0;
-        padding-bottom: 10px;
-    }
-
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-image img {
-        height: 400px;
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .gallery-item.featured {
-        grid-column: span 2;
-        height: 400px;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-inner {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 @media (max-width: 600px) {
 
-    .navbar {
-        min-height: 70px;
-        padding: 8px 15px;
-    }
-
-    .nav-logo img {
-        width: 125px;
-    }
-
-    .nav-links {
-        top: 70px;
-    }
-
     .hero {
-        min-height: 650px;
+
+        min-height: 100vh;
+
+        padding: 0 20px 55px;
+
+        align-items: flex-end;
+
     }
 
-    .hero-inner {
-        padding: 70px 18px;
+    .logo {
+
+        width: 155px;
+
+        top: 20px;
+
+        left: 20px;
+
     }
 
-    .hero h1 {
-        font-size: 42px;
-        letter-spacing: -1px;
-    }
+    .buttons {
 
-    .hero p {
-        font-size: 17px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .hero-buttons .btn {
         width: 100%;
+
+        flex-direction: column;
+
+        gap: 12px;
+
     }
 
-    .quick-info {
-        margin-top: -25px;
-        padding: 0 15px;
+    .btn {
+
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 16px 20px;
+
+        font-size: 16px;
+
     }
 
-    .quick-inner {
-        padding: 20px;
+    #work {
+
+        padding: 35px 12px;
+
     }
 
-    section {
-        padding: 65px 17px;
-    }
+    .gallery {
 
-    .services-grid {
         grid-template-columns: 1fr;
+
+        gap: 12px;
+
     }
 
-    .about-content h2 {
-        font-size: 34px;
+    .gallery img {
+
+        height: 250px;
+
     }
 
-    .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-    }
-
-    .gallery-item {
-        height: 180px;
-    }
-
-    .gallery-item.featured {
-        height: 300px;
-    }
-
-    .gallery-overlay {
-        display: none;
-    }
-
-    .footer-inner {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .contact-card {
-        padding: 25px;
-    }
 }
+
 </style>
+
 </head>
 
 <body>
 
-<header>
-<nav class="navbar">
-
-<a href="#home" class="nav-logo">
-<img src="IMG_0641.jpeg" alt="Prime Roofing & Property Maintenance">
-</a>
-
-<button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
-
-<div class="nav-links" id="navLinks">
-<a href="#home" onclick="closeMenu()">Home</a>
-<a href="#services" onclick="closeMenu()">Services</a>
-<a href="#about" onclick="closeMenu()">About</a>
-<a href="#work" onclick="closeMenu()">Our Work</a>
-<a href="#contact" onclick="closeMenu()">Contact</a>
-<a class="nav-call" href="tel:07709671724">Call 07709 671724</a>
-</div>
-
-</nav>
-</header>
-
-<main id="home">
+<!-- HERO -->
 
 <section class="hero">
-<div class="hero-inner">
-<div class="hero-content">
 
-<span class="hero-label">ROOFING & PROPERTY MAINTENANCE</span>
+    <img
 
-<h1>Professional Roofing. Reliable Property Maintenance.</h1>
+        class="logo"
 
-<p>
-Quality workmanship across Skipton and the surrounding areas.
-From roofing repairs and re-roofing to gutters, paving, painting and general property maintenance.
-</p>
+        src="IMG_0641.jpeg"
 
-<div class="hero-buttons">
-<a class="btn btn-white" href="tel:07709671724">Get a Free Quote</a>
-<a class="btn btn-green" href="#work">View Our Work</a>
-</div>
+        alt="Prime Roofing & Property Maintenance"
 
-</div>
-</div>
+    >
+
+    <div class="buttons">
+
+        <a
+
+            class="btn quote"
+
+            href="tel:07709671724"
+
+        >
+
+            Get a Free Quote
+
+        </a>
+
+        <a
+
+            class="btn work"
+
+            href="#work"
+
+        >
+
+            View Our Work
+
+        </a>
+
+    </div>
+
 </section>
 
-<div class="quick-info">
-<div class="quick-inner">
+<!-- OUR WORK -->
 
-<div class="quick-box">
-<div class="quick-icon">✓</div>
-<div>
-<strong>Quality Workmanship</strong>
-<span>Professional work carried out with care</span>
-</div>
-</div>
+<section id="work">
 
-<div class="quick-box">
-<div class="quick-icon">📍</div>
-<div>
-<strong>Local Service</strong>
-<span>Serving Skipton & surrounding areas</span>
-</div>
-</div>
+    <div class="gallery">
 
-<div class="quick-box">
-<div class="quick-icon">☎</div>
-<div>
-<strong>Free Quotes</strong>
-<span>Call today to discuss your project</span>
-</div>
-</div>
+        <img src="IMG_0103.jpeg" alt="Roofing work">
 
-</div>
-</div>
+        <img src="IMG_0104.jpeg" alt="Roofing work">
 
-<section class="services-section" id="services">
-<div class="container">
+        <img src="IMG_0105.jpeg" alt="Roofing work">
 
-<div class="section-heading">
-<span>What We Do</span>
-<h2>Our Services</h2>
-<p>
-Professional roofing and property maintenance services for homes and properties throughout Skipton and surrounding areas.
-</p>
-</div>
+        <img src="IMG_0316.jpeg" alt="Roofing work">
 
-<div class="services-grid">
+        <img src="IMG_0327.jpeg" alt="Roofing work">
 
-<div class="service-card"><div class="service-icon">⌂</div><h3>Re-Roofing</h3><p>Complete re-roofing and roof replacement work.</p></div>
-<div class="service-card"><div class="service-icon">🔧</div><h3>Roof Repairs</h3><p>Repairs for broken slates, tiles, leaks and general roofing problems.</p></div>
-<div class="service-card"><div class="service-icon">▰</div><h3>Lead Work</h3><p>Professional lead repairs and roofing leadwork.</p></div>
-<div class="service-card"><div class="service-icon">⌁</div><h3>Gutters</h3><p>Gutter installation, maintenance and repairs.</p></div>
-<div class="service-card"><div class="service-icon">◆</div><h3>Dry Ridge & Verges</h3><p>Dry ridge kits and dry verge systems.</p></div>
-<div class="service-card"><div class="service-icon">✦</div><h3>Jet Washing</h3><p>Jet washing for driveways, patios and outdoor areas.</p></div>
-<div class="service-card"><div class="service-icon">▦</div><h3>Flagging</h3><p>Flagging, paving and outdoor groundwork.</p></div>
-<div class="service-card"><div class="service-icon">♧</div><h3>Artificial Grass</h3><p>Professional artificial grass installation.</p></div>
-<div class="service-card"><div class="service-icon">✎</div><h3>Painting</h3><p>Internal and external painting work.</p></div>
-<div class="service-card"><div class="service-icon">⚙</div><h3>Property Maintenance</h3><p>Reliable property maintenance services and much more.</p></div>
+        <img src="IMG_0496.jpeg" alt="Roofing work">
 
-</div>
-</div>
+        <img src="IMG_0548.jpeg" alt="Roofing work">
+
+        <img src="IMG_0734.jpeg" alt="Roofing work">
+
+        <img src="IMG_0740.jpeg" alt="Roofing work">
+
+        <img src="IMG_3856.jpeg" alt="Roofing work">
+
+        <img src="IMG_3862.jpeg" alt="Roofing work">
+
+        <img src="IMG_3882.png" alt="Roofing work">
+
+        <img src="IMG_4506.jpeg" alt="Roofing work">
+
+        <img src="IMG_3185.jpeg" alt="Roofing work">
+
+        <img src="IMG_3219.jpeg" alt="Roofing work">
+
+        <img src="IMG_3232.jpeg" alt="Roofing work">
+
+        <img src="IMG_3304.jpeg" alt="Roofing work">
+
+        <img src="IMG_3511.jpeg" alt="Roofing work">
+
+        <img src="IMG_3713.jpeg" alt="Roofing work">
+
+        <img src="IMG_3721.jpeg" alt="Roofing work">
+
+        <img src="IMG_3724.jpeg" alt="Roofing work">
+
+        <img src="IMG_3753.jpeg" alt="Roofing work">
+
+    </div>
+
 </section>
 
-<section class="about-section" id="about">
-<div class="container">
-<div class="about-grid">
+</body>
 
-<div class="about-image">
-<img src="IMG_0734.jpeg" alt="Prime Roofing recent roofing work">
-</div>
-
-<div class="about-content">
-
-<span>Why Prime Roofing?</span>
-<h2>A Local Service You Can Rely On</h2>
-
-<p>
-Prime Roofing & Property Maintenance provides professional roofing and property maintenance services across Skipton and surrounding areas.
-</p>
-
-<p>
-Whether you need a roof repaired, gutters sorted, outdoor work completed or general property maintenance, we aim to provide a straightforward and professional service from start to finish.
-</p>
-
-<ul class="check-list">
-<li><span class="check">✓</span>Quality workmanship</li>
-<li><span class="check">✓</span>Local service across Skipton</li>
-<li><span class="check">✓</span>Free, no-obligation quotes</li>
-<li><span class="check">✓</span>Professional and reliable service</li>
-</ul>
-
-</div>
-</div>
-</div>
-</section>
-
-<section class="gallery-section" id="work">
-<div class="container">
-
-<div class="section-heading">
-<span>Recent Projects</span>
-<h2>Our Work</h2>
-<p>
-Take a look through some of our recent roofing and property maintenance work.
-Click any photo to view it larger.
-</p>
-</div>
-
-<div class="gallery-grid">
-
-<div class="gallery-item featured" onclick="openLightbox(this)">
-<img src="IMG_0103.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Project</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_0104.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_0105.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_0316.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_0327.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_0496.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_0548.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_0734.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_0740.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_3856.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_3862.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_3882.png" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_4506.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_3185.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_3219.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_3232.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_3304.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_3511.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_3713.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_3721.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_3724.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-<div class="gallery-item" onclick="openLightbox(this)">
-<img src="IMG_3753.jpeg" alt="Prime Roofing recent work">
-<div class="gallery-overlay">View Photo</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="cta">
-<div class="cta-inner">
-<h2>Need Roofing or Property Work?</h2>
-<p>
-Get in touch with Prime Roofing & Property Maintenance today for a free, no-obligation quote.
-</p>
-<a class="cta-phone" href="tel:07709671724">07709 671724</a>
-<br>
-<a class="btn btn-white" href="tel:07709671724">CALL FOR A FREE QUOTE</a>
-</div>
-</section>
-
-<section class="contact-section" id="contact">
-<div class="container">
-
-<div class="section-heading">
-<span>Get In Touch</span>
-<h2>Contact Prime Roofing</h2>
-<p>
-Have a roofing or property maintenance project in mind? Give us a call to discuss your requirements.
-</p>
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-card">
-<h3>Call Us</h3>
-<p>The quickest way to get in touch is by phone.</p>
-<a class="contact-link" href="tel:07709671724">07709 671724</a>
-</div>
-
-<div class="contact-card">
-<h3>Areas We Cover</h3>
-<p>We provide roofing and property maintenance services throughout:</p>
-<strong>Skipton & surrounding areas</strong>
-</div>
-
-</div>
-</div>
-</section>
-
-</main>
-
-<footer>
-
-<div class="footer-inner">
-
-<div class="footer-brand">
-<img src="IMG_0641.jpeg" alt="Prime Roofing & Property Maintenance">
-<p>
-Professional roofing and property maintenance across Skipton and surrounding areas.
-</p>
-</div>
-
-<div>
-<h3>Quick Links</h3>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#work">Our Work</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</div>
-
-<div>
-<h3>Contact</h3>
-<ul>
-<li><a href="tel:07709671724">07709 671724</a></li>
-<li>Skipton & surrounding areas</li>
-</ul>
-</div>
-
-</div>
-
-<div class="footer-bottom">
-© <span id="year"></span> Prime Roofing & Property Maintenance. All rights reserved.
-</div>
-
-</footer>
-
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-<span class="close-lightbox">&times;</span>
-<img id="lightboxImage" src="" alt="Enlarged Prime Roofing project photo">
-</div>
-
-<script>
-function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-}
-
-function closeMenu() {
-    document.getElementById("navLinks").classList.remove("active");
-}
-
-function openLightbox(element) {
-    const image = element.querySelector("img");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImage = document.getElementById("lightboxImage");
-
-    lightboxImage.src = image.src;
-    lightboxImage.alt = image.alt;
-    lightbox.classList.add("active");
-}
-
-function closeLightbox() {
-    document.getElementById("lightbox").classList.remove("active");
-}
-
-document.getElementById("lightboxImage").addEventListener("click", function(event) {
-    event.stopPropagation();
-});
-
-document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
+</html>
